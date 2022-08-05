@@ -10,6 +10,7 @@ import numpy as np
 import streamlit as st
 from pywaffle import Waffle
 from PIL import Image
+import tkinter
 
 # Read Datasets
 # survei tahun 2017
