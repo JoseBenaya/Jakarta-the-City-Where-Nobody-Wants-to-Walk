@@ -203,8 +203,8 @@ para pejalan kaki memakai pinggir jalan sebagai jalur berjalan kaki. Ini sangat 
 with col2:
     st.plotly_chart(fig_sidewalk_by_year)
 
-image = Image.open('foto\pedagang kaki lima masih berjualan di sekitar luar Tebet Eco Park tepatnya sisi Jalan Tebet Barat, Jakarta Selatan.jpg')
-image2 = Image.open('foto\kondisi-trotoar-jl-pegangsaan-timur-jakpus-yang-diserobot-pemotor-17-mei-2022-sore-annisa-rfdetikcom-1.jpeg')
+image = Image.open('foto/pedagang kaki lima masih berjualan di sekitar luar Tebet Eco Park tepatnya sisi Jalan Tebet Barat, Jakarta Selatan.jpg')
+image2 = Image.open('foto/kondisi-trotoar-jl-pegangsaan-timur-jakpus-yang-diserobot-pemotor-17-mei-2022-sore-annisa-rfdetikcom-1.jpeg')
 
 
 col1, col2, col3 = st.columns([1, 1, 1])
