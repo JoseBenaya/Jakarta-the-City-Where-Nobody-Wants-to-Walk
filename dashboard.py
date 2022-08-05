@@ -11,7 +11,7 @@ from PIL import Image
 
 # Read Datasets
 # survei tahun 2017
-countries_by_steps = pd.read_csv('dataset\countries_by_steps.csv')
+countries_by_steps = pd.read_csv('dataset/countries_by_steps.csv')
 
 def find_country(country_name):
     try:
@@ -33,13 +33,13 @@ countries_by_steps['country_code'] = np.where(mask_taiwan, 'TWN', countries_by_s
 
 # countries_by_steps[countries_by_steps['country_code'] == 'not found']
 # survei tahun 2017
-countries_with_gender_gap = pd.read_csv('dataset\countries_with_gender_gap.csv')
+countries_with_gender_gap = pd.read_csv('dataset/countries_with_gender_gap.csv')
 countries_with_gender_gap = countries_with_gender_gap.rename(columns={'gender_gap_(m-f)':'gender_gap', 'gender_gap_(m-f)/m':'gender_gap_pct'})
 countries_with_gender_gap['gender_gap_pct'] = countries_with_gender_gap['gender_gap_pct'].str.replace('%', '')
 countries_with_gender_gap['gender_gap_pct'] = countries_with_gender_gap['gender_gap_pct'].astype('float')
 
 # survei tahun 2015
-road_length_in_jakarta = pd.read_excel('dataset\panjang-jalan-di-dki-jakarta-mencapai-7000-km.xlsx')
+road_length_in_jakarta = pd.read_excel('dataset/panjang-jalan-di-dki-jakarta-mencapai-7000-km.xlsx')
 get_road_length = round(road_length_in_jakarta['value'].sum(), 2)
 
 # survei tahun 2017
@@ -50,7 +50,7 @@ data_sex_harras_gender = {'jenis kelamin':['Laki-laki', 'Perempuan'], 'persentas
 sexual_harrasment_by_gender = pd.DataFrame(data_sex_harras_gender)
 
 # survei tahun 2018
-sexual_harrasment_in_public_space = pd.read_excel('dataset\\transportasi-umum-sarang-pelecehan-seksual-di-ruang-publik.xlsx')
+sexual_harrasment_in_public_space = pd.read_excel('dataset/transportasi-umum-sarang-pelecehan-seksual-di-ruang-publik.xlsx')
 sexual_harrasment_in_public_space = sexual_harrasment_in_public_space.rename(columns={'nama_data':'moda_transportasi_umum', 'value':'persentase'})
 
 # survei tahun 2018
@@ -58,7 +58,7 @@ data_sex_harras_types = {'bentuk_pelecehan':['Verbal', 'Fisik', 'Visual'], 'pers
 sexual_harrasment_types = pd.DataFrame(data_sex_harras_types)
 
 # survei tahun 2022
-world_rank_air_quality = pd.read_excel('dataset\kualitas-udara-jakarta-pagi-ini-terburuk-kedua-di-dunia-jumat-17-juni-2022.xlsx')
+world_rank_air_quality = pd.read_excel('dataset/kualitas-udara-jakarta-pagi-ini-terburuk-kedua-di-dunia-jumat-17-juni-2022.xlsx')
 # AQI = Air Quality Index
 world_rank_air_quality = world_rank_air_quality.rename(columns={'nama_data':'city', 'value':'AQI'})
 
@@ -155,7 +155,7 @@ st.markdown("""menurut **cnbcindonesia.com**, **kompas.com**, **idntimes.com** d
 
 
 # data panjang trotoar di Jakarta
-sidewalk_length_in_jakarta = pd.read_excel('dataset\panjang_dan_luas_trotoar_dki_jakarta.xls')
+sidewalk_length_in_jakarta = pd.read_excel('dataset/panjang_dan_luas_trotoar_dki_jakarta.xls')
 headers = sidewalk_length_in_jakarta.iloc[2]
 sidewalk_length_in_jakarta = pd.DataFrame(sidewalk_length_in_jakarta.values[3:], columns=headers)
 
@@ -171,7 +171,7 @@ sidewalk_length_in_jakarta = sidewalk_length_in_jakarta.fillna(0)
 sidewalk_length_2020 = sidewalk_length_in_jakarta.iloc[-1]['Panjang (M)']
 sidewalk_length_2020 = round(sidewalk_length_2020 / 1000, 2)
 
-road_length_in_jakarta = pd.read_excel('dataset\panjang-jalan-di-dki-jakarta-mencapai-7000-km.xlsx')
+road_length_in_jakarta = pd.read_excel('dataset/panjang-jalan-di-dki-jakarta-mencapai-7000-km.xlsx')
 get_road_length = round(road_length_in_jakarta['value'].sum(), 2)
 
 mean_increase_sidewalk = round(sidewalk_length_in_jakarta['Increase Percentage'].mean(), 4)
