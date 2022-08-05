@@ -1,5 +1,4 @@
 # Import Libraries
-from turtle import width
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -10,7 +9,7 @@ import numpy as np
 import streamlit as st
 from pywaffle import Waffle
 from PIL import Image
-import tkinter
+import tkinter as TK
 
 # Read Datasets
 # survei tahun 2017
