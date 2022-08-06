@@ -191,7 +191,7 @@ with col3:
 fig_sidewalk_by_year = px.bar(sidewalk_length_in_jakarta, x='Tahun Anggaran', y='Panjang (M)',
                 color='Panjang (M)',
                 title='<b>Panjang Trotoar di Jakarta 2001-2020</b>',
-                labels={'Panjang (M)':'Panjang'})
+                labels={'Panjang (M)':'Panjang', 'Tahun Anggaran':'Tahun'})
 fig_sidewalk_by_year.update_layout(xaxis={'categoryorder':'total descending'})
 
 col1, col2 = st.columns(2)
