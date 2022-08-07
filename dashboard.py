@@ -342,4 +342,4 @@ with st.container():
     </li>
     """, unsafe_allow_html=True)
 
-st.markdown("""&copy; 2020 Jose Alfred Benaya""", unsafe_allow_html=True)
+st.markdown("""&copy; 2022 Jose Alfred Benaya""", unsafe_allow_html=True)
